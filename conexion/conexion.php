@@ -1,6 +1,6 @@
 <?php 
 
-$servidor = "mysql:dbname=empresa;host=127.0.0.1";
+$servidor = "mysql:dbname=empresa;host=localhost";
 $usuario = "cheque";
 $password = "y";
 
