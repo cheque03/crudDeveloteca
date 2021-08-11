@@ -6,7 +6,7 @@ $password = "y";
 
 try {
 	$pdo = new PDO($servidor, $usuario, $password);
-	echo "conectado..";
+	//echo "conectado..";
 	
 } catch (PDOException $e) {
 	
