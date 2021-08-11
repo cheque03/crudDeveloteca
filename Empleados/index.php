@@ -82,8 +82,8 @@ require 'empleados.php'
 		      <div class="modal-footer">
 		        <button value="btnAgregar" <?php echo $accionAgregar; ?> class="btn btn-success" type="submit" name="accion">Agregar</button>
 			  	<button value="btnModificar" <?php echo $accionModificar; ?> class="btn btn-warning" type="submit" name="accion">Modificar</button>
-			  	<button value="btnEliminar" <?php echo $accionEliminar; ?> class="btn btn-danger" type="submit" name="accion">Eliminar</button>
-			  	<button value="btnCancelar" <?php echo $accionCancelar; ?> class="btn btn-primary" type="submit" name="accion">Cancelar</button>
+			  	<button value="btnEliminar" onclick="return Confirmar('¿Realmente deseas borrar?');" <?php echo $accionEliminar; ?> class="btn btn-danger" type="submit" name="accion">Eliminar</button>
+			  	<button value="btnCancelar"  <?php echo $accionCancelar; ?> class="btn btn-primary" type="submit" name="accion">Cancelar</button>
 		      </div>
 		    </div>
 		  </div>
@@ -119,7 +119,7 @@ require 'empleados.php'
 	  						
 	  						
 	  						<input type="submit" value="Seleccionar" class="btn btn-info" name="accion">
-	  						<button value="btnEliminar" type="submit" class="btn btn-danger" name="accion">Eliminar</button>
+	  						<button value="btnEliminar" onclick="return Confirmar('¿Realmente deseas borrar?');" type="submit" class="btn btn-danger" name="accion">Eliminar</button>
 	  					</form>
 
 	  						
@@ -137,6 +137,11 @@ require 'empleados.php'
 	</script>
 
 <?php } ?>
+<script>
+	function Confirmar(Mensaje) {
+		return (confirm(Mensaje)) ? true :false;
+	}
+</script>
 
 	</div>
 </body>
